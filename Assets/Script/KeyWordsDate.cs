@@ -8,11 +8,12 @@ public class KeyWordsDate : MonoBehaviour {
 
 
 	public static string[] keywords;
-	string[] questions;
-	bool[,] answers;//左側がquesutions、右側がkeywords
+	public static string[] questions;
+	public static bool[,] answers;//左側がquesutions、右側がkeywords
 	public Text keywordA, keywordB;
-	public Text cardA1, cardA2, cardA3;
-	public Text cardB1, cardB2, cardB3;
+	public Text SelectquestionA,SelectquestionB;
+//	public Text cardA1, cardA2, cardA3;
+//	public Text cardB1, cardB2, cardB3;
 
 
 	private TextAsset csvFile; // CSVファイル
@@ -73,9 +74,11 @@ public class KeyWordsDate : MonoBehaviour {
 	}
 
 	void decide(){
+		int numberA = Random.Range (0, keywords.Length);
+		int numberB = Random.Range (0, keywords.Length);
 
-		keywordA.text = keywords [Random.Range(0, keywords.Length)].ToString();
-		keywordB.text = keywords [Random.Range(0, keywords.Length)].ToString();
+		keywordA.text = keywords [numberA].ToString();
+		keywordB.text = keywords [numberB].ToString();
 
 
 	}
@@ -84,6 +87,9 @@ public class KeyWordsDate : MonoBehaviour {
 	
 	// Update is calle		d once per frame
 	void Update () {
-		
+
+
+
+
 	}
 }
