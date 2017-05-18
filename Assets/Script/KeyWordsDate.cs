@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 public class KeyWordsDate : MonoBehaviour {
 
-	string[] keywords;
+
+	public static string[] keywords;
 	string[] questions;
 	bool[,] answers;//左側がquesutions、右側がkeywords
+	public Text keywordA, keywordB;
+	public Text cardA1, cardA2, cardA3;
+	public Text cardB1, cardB2, cardB3;
+
 
 	private TextAsset csvFile; // CSVファイル
 
@@ -31,9 +37,9 @@ public class KeyWordsDate : MonoBehaviour {
 
 			//配列arrayの値の入っている箱の数
 			int number = array.Length;
-			Debug.Log (number);
-			Debug.Log (line);
-			Debug.Log (height);
+//			Debug.Log (number);
+//			Debug.Log (line);
+//			Debug.Log (height);
 
 			if (height == 0) {
 				//配列keywordsに値の代入
@@ -43,7 +49,7 @@ public class KeyWordsDate : MonoBehaviour {
 			} else {
 				//配列questionsに値の代入
 				questions [height-1] = array [0];
-				Debug.Log (questions [height-1]);
+//				Debug.Log (questions [height-1]);
 				//配列answersに値の代入
 				for (int i = 1; i < number; i++) {
 					if (array [i] == "〇") {
@@ -56,14 +62,24 @@ public class KeyWordsDate : MonoBehaviour {
 			//一段行を下げる
 			height++;
 		}
-		Debug.Log (keywords [0]);
-		Debug.Log (keywords [19]);
-		Debug.Log (questions[0]);
-		Debug.Log (questions[20]);
-		Debug.Log (answers[0,0]);
+//		Debug.Log (keywords [0]);
+//		Debug.Log (keywords [19]);
+//		Debug.Log (questions[0]);
+//		Debug.Log (questions[20]);
+//		Debug.Log (answers[0,0]);
+
+		decide ();
+
+	}
+
+	void decide(){
+
+		keywordA.text = keywords [Random.Range(0, keywords.Length)].ToString();
+		keywordB.text = keywords [Random.Range(0, keywords.Length)].ToString();
 
 
 	}
+
 
 	
 	// Update is calle		d once per frame
