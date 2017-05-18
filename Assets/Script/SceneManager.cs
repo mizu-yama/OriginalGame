@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour {
 
@@ -13,4 +16,15 @@ public class SceneManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	public void StartSea(){
+//		SceneManager.LoadScene ("StageSea");
+		Application.LoadLevel("StageSea");
+	}
+
+	public void Restart(){
+		Application.LoadLevel("Start");
+	}
+
+
 }
