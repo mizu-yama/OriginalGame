@@ -5,10 +5,7 @@ using UnityEngine;
 public class PanelManager : MonoBehaviour {
 
 	int panelIndex = 0; //今表示しているpanelのindex
-
 	public GameObject[] panels;
-
-
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +21,7 @@ public class PanelManager : MonoBehaviour {
 		panelIndex = input;//引数のinputをpanelIndexに代入する
 		Display();
 	}
+		
 
 	//panelIndexのの番号のpanelを画面に表示する
 	void Display(){

@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 222896785453967170}
   - component: {fileID: 114833901379905276}
   m_Layer: 0
-  m_Name: Text
+  m_Name: BBanswer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 222851593767020912}
   - component: {fileID: 114597593204380196}
   m_Layer: 5
-  m_Name: Text
+  m_Name: BASelectQuestion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 222438758150201722}
   - component: {fileID: 114458718273977332}
   m_Layer: 0
-  m_Name: Text
+  m_Name: BAanswer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 222335872422119318}
   - component: {fileID: 114595448416198234}
   m_Layer: 5
-  m_Name: Text
+  m_Name: BBSelectQuestion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -775,7 +775,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u3053\u306E\u9078\u629E\u3067\n\u89E3\u7B54\u3092\u7D42\u4E86\u3059\u308B"
+  m_Text: "\u89E3\u7B54\u306E\u78BA\u8A8D\u3092\n\u7D42\u4E86\u3059\u308B"
 --- !u!114 &114595448416198234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -797,15 +797,15 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: XXXXX
@@ -830,15 +830,15 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: XXXXX

@@ -2,31 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using UnityEngine.UI;
 
 public class KeyWordsDate : MonoBehaviour {
 
-
 	public static string[] keywords;
 	public static string[] questions;
-	public static bool[,] answers;//左側がquesutions、右側がkeywords
-	public Text keywordA, keywordB;
-	public Text SelectquestionA,SelectquestionB;
-//	public Text cardA1, cardA2, cardA3;
-//	public Text cardB1, cardB2, cardB3;
-
+	public static string[,] answers;//左側がquesutions、右側がkeywords
+	public static int numberA;
+	public static int numberB;
 
 	private TextAsset csvFile; // CSVファイル
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
 		//配列の箱の数の指定
 		keywords = new string[20];
-		questions = new string[50];
-		answers = new bool[50, 20];
+		questions = new string[19];
+		answers = new string[19, 20];
 
-		csvFile = Resources.Load("CSV/" + "SeaKeywords") as TextAsset; /* Resouces/CSV下のCSV読み込み */
+		csvFile = Resources.Load("CSV/" + "SeaKeywords1") as TextAsset; /* Resouces/CSV下のCSV読み込み */
 		StringReader reader = new StringReader(csvFile.text);
 
 		//行の指定
@@ -54,9 +49,9 @@ public class KeyWordsDate : MonoBehaviour {
 				//配列answersに値の代入
 				for (int i = 1; i < number; i++) {
 					if (array [i] == "〇") {
-						answers [height - 1, i - 1] = true;
+						answers [height - 1, i - 1] = "YES";
 					} else {
-						answers [height - 1, i - 1] = false;
+						answers [height - 1, i - 1] = "NO";
 					}
 				}
 			}
@@ -68,28 +63,13 @@ public class KeyWordsDate : MonoBehaviour {
 //		Debug.Log (questions[0]);
 //		Debug.Log (questions[20]);
 //		Debug.Log (answers[0,0]);
-
-		decide ();
-
-	}
-
-	void decide(){
-		int numberA = Random.Range (0, keywords.Length);
-		int numberB = Random.Range (0, keywords.Length);
-
-		keywordA.text = keywords [numberA].ToString();
-		keywordB.text = keywords [numberB].ToString();
-
+		KeyWordsDate.numberA = Random.Range (0, KeyWordsDate.keywords.Length);
+		KeyWordsDate.numberB = Random.Range (0, KeyWordsDate.keywords.Length);
 
 	}
 
-
-	
 	// Update is calle		d once per frame
 	void Update () {
-
-
-
 
 	}
 }
